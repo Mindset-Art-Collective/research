@@ -17,7 +17,7 @@ def closed_loop_walkoff(
     n_runs: int = 1000,
     seed: int | None = None,
 ) -> dict:
-    """Simulate phase noise rejection by a 1‑pole controller.
+    """Simulate phase noise rejection by a 1-pole controller.
 
     Parameters mirror the simple frequency-domain model used in WP2. `psd_f`
     and `psd_mag` describe the path length jitter power spectral density. The
@@ -31,8 +31,10 @@ def closed_loop_walkoff(
     dt = 1.0 / (2 * max_f)
     n = int(accel_time_s / dt)
 
-    # approximate white noise standard deviation from PSD magnitude
-    noise_std = float(np.mean(psd_mag))
+    # approximate white noise std from PSD magnitude and bandwidth
+    bandwidth = float(np.max(psd_f) - np.min(psd_f))
+    # PSD has units m^2/Hz, integrate over equivalent bandwidth for variance
+    noise_std = float(np.sqrt(np.mean(psd_mag) * bandwidth))
 
     alpha = np.exp(-2 * np.pi * controller_bw_hz * dt)
 

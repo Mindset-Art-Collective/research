@@ -1,6 +1,8 @@
-"""WP2 – Phasing & pointing control models."""
+"""WP2 - Phasing & pointing control models."""
 
-import yaml, math, pathlib
+import yaml
+import math
+import pathlib
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -12,7 +14,7 @@ def required_path_length_stability(lambda_m: float,
                                    R_sail_m: float,
                                    distance_m: float,
                                    baseline_m: float) -> float:
-    """Return required RMS path‑length stability (meters).
+    """Return required RMS path-length stability (meters).
 
     Derivation:
         angular error δθ ≈ δL / baseline

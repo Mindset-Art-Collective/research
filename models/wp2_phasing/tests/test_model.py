@@ -1,4 +1,5 @@
-import pathlib, sys
+import pathlib
+import sys
 sys.path.append(str(pathlib.Path(__file__).resolve().parents[3]))
 from models.wp2_phasing import model as m
 

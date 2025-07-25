@@ -3,7 +3,7 @@ physics:
   c: 299792458.0            # m/s
   h: 6.62607015e-34         # J*s
   k_B: 1.380649e-23         # J/K
-  sigma_sb: 5.670374419e-8  # W/m^2/K^4 (Stefan–Boltzmann)
+  sigma_sb: 5.670374419e-8  # W/m^2/K^4 (Stefan-Boltzmann)
 
 mission:
   betas: [0.2, 0.3, 0.4, 0.5]
