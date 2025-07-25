@@ -1,0 +1,44 @@
+# Global shared constants (edit as research refines)
+physics:
+  c: 299792458.0            # m/s
+  h: 6.62607015e-34         # J*s
+  k_B: 1.380649e-23         # J/K
+  sigma_sb: 5.670374419e-8  # W/m^2/K^4 (Stefan–Boltzmann)
+
+mission:
+  betas: [0.2, 0.3, 0.4, 0.5]
+  payload_masses_g: [1, 2, 5, 10]
+  sail_radii_m: [1.0, 2.26, 5.0]
+  accel_times_s: [30, 60, 120, 300]
+  delivered_energy_TJ: [1, 10, 30, 50, 100, 200]
+  array_diameters_km: [0.1, 1, 10, 50, 100]
+  wavelengths_nm: [650, 1064, 1550]
+  reflectivity_nominal: 0.999996
+  reflectivity_range: [0.99999, 0.999999]
+  absorptivity_ppm_range: [1.0, 10.0, 100.0]   # ppm
+  sail_emissivity: 0.8
+
+phasing:
+  phase_error_target_pm: 1.0        # picometers RMS path-length target (tunable)
+  control_bandwidth_hz: 1000        # kHz-class control loop target
+  accel_window_s: 120               # seconds of coherent control during burn
+
+storage:
+  energies_TJ: [10, 30, 100]
+  flywheel_specific_energy_range_MJ_per_kg: [0.3, 1.0]
+  flywheel_round_trip_efficiency_range: [0.80, 0.95]
+  thermal_round_trip_efficiency_range: [0.50, 0.80]
+  smes_round_trip_efficiency_range: [0.85, 0.98]
+
+comms:
+  dataset_bits_nominal: 70000000     # 70 Mbit (may change)
+  lunar_receiver_diameters_m: [10, 30, 100, 1000, 100000]   # 100 km for array
+  earth_receiver_diameters_m: [10, 30, 100]
+  integration_times_hours: [0.17, 1, 6, 24, 168]  # 10 min to 7 days
+  quantum_squeezing_gain_dB_range: [0.0, 6.0]     # optimistic upper bound, adjust per loss
+  doppler_betas: [0.2, 0.3, 0.5]
+
+receive_array:
+  coherent_sum: true
+  temperature_K: 40        # example cryo assumption for detectors
+  dark_count_rate_hz: 0.1  # placeholder; will be refined
