@@ -1,0 +1,6 @@
+__pycache__/
+.venv/
+figures/**/*.png
+*.tar.gz
+*.zip
+.DS_Store
