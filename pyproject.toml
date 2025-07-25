@@ -1,0 +1,13 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "lunar_lightsail_models"
+version = "0.1.0"
+description = "Models for lunar lightsail array"
+authors = [{name = "Codex"}]
+
+[tool.pytest.ini_options]
+addopts = "-vv"
+testpaths = ["models", "tests"]
