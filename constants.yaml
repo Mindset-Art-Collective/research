@@ -4,6 +4,7 @@ physics:
   h: 6.62607015e-34         # J*s
   k_B: 1.380649e-23         # J/K
   sigma_sb: 5.670374419e-8  # W/m^2/K^4 (Stefan-Boltzmann)
+  meters_per_light_year: 9.4607e15  # m
 
 mission:
   betas: [0.2, 0.3, 0.4, 0.5]
@@ -36,7 +37,14 @@ comms:
   earth_receiver_diameters_m: [10, 30, 100]
   integration_times_hours: [0.17, 1, 6, 24, 168]  # 10 min to 7 days
   quantum_squeezing_gain_dB_range: [0.0, 6.0]     # optimistic upper bound, adjust per loss
+  wavelength_m: 1.064e-6       # m, 1064 nm
   doppler_betas: [0.2, 0.3, 0.5]
+
+link_budget:
+  transmit_power_w: 1.0        # W
+  transmit_aperture_m: 0.1     # m
+  system_efficiency: 0.5       # fraction
+  quantum_loss_fraction: 0.1   # fractional loss in squeezed link
 
 receive_array:
   coherent_sum: true
