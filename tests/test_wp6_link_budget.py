@@ -22,8 +22,10 @@ def test_doppler_redshift():
 
 def test_photon_count_scaling():
     c = load_consts()
-    p = photon_count_rx(1.0, 1064e-9, 0.1, 1.0, 1e6, 1.0)
-    p2 = photon_count_rx(1.0, 1064e-9, 0.1, 2.0, 1e6, 1.0)
+    lam = c["comms"]["wavelength_m"]
+    D_tx = c["link_budget"]["transmit_aperture_m"]
+    p = photon_count_rx(1.0, lam, D_tx, 1.0, 1e6, 1.0)
+    p2 = photon_count_rx(1.0, lam, D_tx, 2.0, 1e6, 1.0)
     assert p2 > p
 
 

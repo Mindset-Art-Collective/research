@@ -6,6 +6,8 @@ sys.path.append(str(pathlib.Path(__file__).resolve().parents[1]))
 from models.wp2_phasing.model import plot_phase_error_frontier
 from models.wp2_phasing.control_loop import plot_closed_loop_walkoff
 from models.wp3_storage.model import plot_storage_tradeoff
+# WP6 communications figure uses squeezing parameters grounded in
+# LIGO-grade implementations (~6 dB max, 10% loss)
 from models.wp6_comms.link_budget import plot_bits_home_grid
 
 Path('figures/wp2_phasing').mkdir(parents=True, exist_ok=True)
