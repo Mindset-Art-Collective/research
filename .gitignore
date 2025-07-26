@@ -4,3 +4,58 @@ figures/**/*.png
 *.tar.gz
 *.zip
 .DS_Store
+
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+*.env
+.env
+
+# macOS
+.DS_Store
+
+# VSCode or IDE
+.vscode/
+.idea/
+
+# Bytecode / compiled
+*.so
+*.o
+*.out
+
+# Logs / temp
+*.log
+*.tmp
+*.bak
+
+# Node
+node_modules/
+
+# Virtual envs
+venv/
+.env/
+.envrc
+
+# OS junk
+Thumbs.db
+
+# Python virtual environments
+venv/
+.venv/
+
+# Python cache
+__pycache__/
+*.py[cod]
+
+# macOS
+.DS_Store
+
+# Archives
+*.tar.gz
+*.zip
+
+# Output
+figures/**/*.png
+
