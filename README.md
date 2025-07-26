@@ -30,3 +30,7 @@ The WP6 communications models incorporate optional quantum squeezing, capped at
 6&nbsp;dB with a 10% loss factor, reflecting LIGO-grade performance (see
 PhysRevX.13.041021). Figure F2-03 illustrates the bits returned vs aperture and
 integration time for various β.
+
+WP6B extends this with a model of Earth vs Moon integration duty cycles.
+The lunar model assumes a near-side equatorial site with ~10% downtime for
+possible Earth obstruction and local terrain.
